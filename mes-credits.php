@@ -62,7 +62,7 @@
                 <div class="col-lg-4 col-sm-12">
                     <label for="credits" class="form-label text-decoration-underline text-changing fw-bolder">Nombre de crédits :</label>
                     <div class="input-group">
-                        <input  onkeyup="changeMoneyInput(this.value*5,'sum')" type="number" min="0" max="999" pattern="[0-9]{6}" id="credits" name="credits" class="form-control fw-bolder" value="<?=$_SESSION['credits']?>">
+                        <input onkeyup="changeMoneyInput(this.value*5,'sum')" type="number" min="0" max="999" pattern="[0-9]{6}" id="credits" name="credits" class="form-control fw-bolder" value="<?=$_SESSION['credits']?>">
                         <span class="input-group-text fw-bolder"><span id="sum"><?= number_format($_SESSION['credits']*5, 0, '.', ' ')?></span> €</span>
                     </div>
                 </div>

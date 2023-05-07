@@ -4,7 +4,6 @@
     
     if (isset($_POST['valider'])) {
         if ($utilisateur=$managerUser->getUserByMail($_POST['email'])) {
-            echo($utilisateur->getBanned());
             if (password_verify($_POST['password'], $utilisateur->getMdp())) {
                 if($utilisateur->getBanned() == "1") { header('Location: connexion.php?error=banned');die(); }
                 

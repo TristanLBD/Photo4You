@@ -13,7 +13,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="./acheter.php?page=1"><i class="fas fa-images"></i> Acheter</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-star"></i> Les plus populaires</a>
+                            <!-- <a class="dropdown-item" href="#"><i class="fas fa-star"></i> Les plus populaires</a> -->
                             <a class="dropdown-item" href="./nouveautes.php?page=1"><i class="fas fa-camera"></i> Les nouveautés</a>
                         </div>
                     </li>

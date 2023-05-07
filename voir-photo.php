@@ -83,13 +83,13 @@
 
                 <hr class="mx-5">
 
-                <?php if($_SESSION['type'] == "photographe" && $_SESSION['id'] == $photo['idVendeur']) { ?>
+                <?php if(isset($_SESSION['type']) && $_SESSION['type'] == "photographe" && $_SESSION['id'] == $photo['idVendeur']) { ?>
                     <div class="row">
                         <div class="col d-flex justify-content-center">
                             <a type="button" class="btn btn-danger" href="./voir-photo.php?delete=true&id=<?=$idPhoto?>">Supprimer</a>
                         </div>
                     </div>
-                <?php } elseif($_SESSION['type'] == "client") { ?>
+                <?php } elseif(isset($_SESSION['type']) && $_SESSION['type'] == "client") { ?>
                     <form class="row needs-validation" action="voir-photo.php?id=<?=$idPhoto?>" method="POST" novalidate enctype="multipart/form-data">
                         <div class="col d-flex justify-content-center">
                             <input onclick='askForBuying("<?=$photo["Nom"]?>",<?=$photo["Prix"]?>)' type="submit" value="Acheter" class="btn btn-success" name="valider">
